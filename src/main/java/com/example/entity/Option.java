@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -14,6 +15,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Option {
 
+  @JsonIgnore
   @Id @GeneratedValue private Integer id;
   private String a;
   private String b;

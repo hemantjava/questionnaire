@@ -37,4 +37,8 @@ public class ExtractService {
             .findFirst();
     return first.map(answerDto -> answerDto.getOpt().equalsIgnoreCase(option)).orElse(false);
   }
+
+  public Answer save(Answer answer){
+    return answerRepository.saveAndFlush(answer);
+  }
 }

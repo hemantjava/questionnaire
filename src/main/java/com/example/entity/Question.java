@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Question {
 
+  @JsonIgnore
   @Id @GeneratedValue private Integer id;
   private String question;
   private Integer questionNumber;
